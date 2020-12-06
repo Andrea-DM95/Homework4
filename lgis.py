@@ -34,3 +34,13 @@ def binary_search(element,l,array,end):
             start = mid + 1
     
     return start
+
+f=open("rosalind_lgis.txt","r")
+n=int(f.readline())
+l=list(map(int,f.readline().split()))
+f.close()
+nf=open("output_lgis.txt","w")
+nf.write(' '.join(str(a) for a in lis(l,n)))
+nf.write('\n')
+nf.write(' '.join(str(b) for b in lis(l[::-1],n)[::-1]))
+nf.close()
